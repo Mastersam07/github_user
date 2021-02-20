@@ -1,9 +1,9 @@
 import 'package:dartz/dartz.dart';
-import '../../../../core/error/app_failures.dart';
-import '../../data/data_sources/remote_data_sources.dart';
-import '../../data/models/github_user_model.dart';
-import '../../data/models/githup_repo_model.dart';
-import '../../data/models/search_result.dart';
+import 'package:github_user/core/error/app_failures.dart';
+import 'package:github_user/features/user_fetch/data/data_sources/remote_data_sources.dart';
+import 'package:github_user/features/user_fetch/data/models/github_user_model.dart';
+import 'package:github_user/features/user_fetch/data/models/githup_repo_model.dart';
+import 'package:github_user/features/user_fetch/data/models/search_result.dart';
 import 'package:meta/meta.dart';
 
 abstract class FetchUserRepository {
