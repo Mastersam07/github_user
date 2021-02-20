@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
-import 'package:github_user/core/core_presentation/core_view_model/core_view_model.dart';
-import 'package:github_user/features/user_fetch/data/models/githup_repo_model.dart';
-import 'package:github_user/features/user_fetch/domain/use_cases/fetch_user_repo.dart';
+import '../../../../core/core_presentation/core_view_model/core_view_model.dart';
+import '../../data/models/githup_repo_model.dart';
+import '../../domain/use_cases/fetch_user_repo.dart';
 import 'package:meta/meta.dart';
 
 class FetchReposViewModel extends BaseViewModel {

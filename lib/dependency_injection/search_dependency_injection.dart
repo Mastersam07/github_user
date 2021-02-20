@@ -1,14 +1,15 @@
-import 'package:github_user/features/user_fetch/data/data_sources/remote_data_sources.dart';
-import 'package:github_user/features/user_fetch/domain/repository/user_fetch_repository.dart';
-import 'package:github_user/features/user_fetch/domain/use_cases/fetch_user.dart';
-import 'package:github_user/features/user_fetch/domain/use_cases/fetch_user_repo.dart';
-import 'package:github_user/features/user_fetch/domain/use_cases/search_user.dart';
-import 'package:github_user/features/user_fetch/presentation/view_models/fetch_user_repos_View_model.dart';
-import 'package:github_user/features/user_fetch/presentation/view_models/fetch_user_view_model.dart';
-import 'package:github_user/features/user_fetch/presentation/view_models/search_view_model.dart';
+import '../features/user_fetch/data/data_sources/remote_data_sources.dart';
+import '../features/user_fetch/domain/repository/user_fetch_repository.dart';
+import '../features/user_fetch/domain/use_cases/fetch_user.dart';
+import '../features/user_fetch/domain/use_cases/fetch_user_repo.dart';
+import '../features/user_fetch/domain/use_cases/search_user.dart';
+import '../features/user_fetch/presentation/view_models/fetch_user_repos_View_model.dart';
+import '../features/user_fetch/presentation/view_models/fetch_user_view_model.dart';
+import '../features/user_fetch/presentation/view_models/search_view_model.dart';
 
 import 'app_dependency_injection.dart';
 
+// ignore: always_declare_return_types
 registerSearchDependencies() {
   //VIEW MODELS
   AppDependencyInjection.di
