@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../../data/models/github_user_model.dart';
-import '../views/user_details_view.dart';
+import 'package:github_user/features/user_fetch/data/models/github_user_model.dart';
+import 'package:github_user/features/user_fetch/presentation/views/user_details_view.dart';
 
 class GithubUserCard extends StatelessWidget {
   final GithubUser user;
@@ -20,7 +20,7 @@ class GithubUserCard extends StatelessWidget {
           ),
         );
       },
-      child: SizedBox(
+      child: Container(
         height: 110,
         child: Row(
           children: [
@@ -29,17 +29,39 @@ class GithubUserCard extends StatelessWidget {
               backgroundImage:
                   user.avatarUrl.isNotEmpty && user.avatarUrl != null
                       ? NetworkImage(user.avatarUrl)
-                      : const FlutterLogo(),
+                      : FlutterLogo(),
             ),
-            const SizedBox(
+            SizedBox(
               width: 25,
             ),
             Text(
-              user.login ?? '',
-              style: const TextStyle(
+              user.login ?? "",
+              style: TextStyle(
                 fontSize: 20,
               ),
             ),
+            // Column(
+            //   mainAxisAlignment: MainAxisAlignment.spaceAround,
+            //   children: [
+            //     Row(
+            //       children: [
+            //         Text("Name: ${user.name ?? ""}"),
+            //         SizedBox(
+            //           width: 15,
+            //         ),
+            //         Text(
+            //           user.login ?? "",
+            //         )
+            //       ],
+            //     ),
+            //     Row(
+            //       children: [
+            //         Text(user.company ?? 'Company'),
+            //         Text(user.location ?? 'location'),
+            //       ],
+            //     ),
+            //   ],
+            // )
           ],
         ),
       ),

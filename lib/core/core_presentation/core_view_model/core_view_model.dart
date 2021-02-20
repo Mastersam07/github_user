@@ -1,18 +1,16 @@
 import 'package:flutter/material.dart';
-import '../../error/app_failures.dart';
-import '../../process_indicators/feedback_class.dart';
+import 'package:github_user/core/error/app_failures.dart';
+import 'package:github_user/core/process_indicators/feedback_class.dart';
 
 class BaseViewModel extends ChangeNotifier {
   ViewState appViewState;
   String activityMessage;
-  // ignore: always_declare_return_types
   setState({ViewState viewState = ViewState.idle, String message}) {
-    appViewState = viewState;
-    activityMessage = message;
+    this.appViewState = viewState;
+    this.activityMessage = message;
     notifyListeners();
   }
 
-  // ignore: always_declare_return_types
   handleFailure(BuildContext context, ActionFailure failure) {
     switch (failure.runtimeType) {
       case ServerFailure:
