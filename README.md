@@ -1,8 +1,8 @@
-# github_exercise
+# github_user
 
 A new Flutter application.
 
-![Flutter CI](https://github.com/Mastersam07/github-exercise/workflows/Flutter%20CI/badge.svg)
+![Flutter CI](https://github.com/Mastersam07/github_user/workflows/Flutter%20CI/badge.svg)
 
 ## Getting Started
 
