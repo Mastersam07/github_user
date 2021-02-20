@@ -156,8 +156,7 @@ class GithubRepo {
     name = json['name'];
     fullName = json['full_name'];
     private = json['private'];
-    owner =
-        json['owner'] != null ? GithubUser.fromJson(json['owner']) : null;
+    owner = json['owner'] != null ? GithubUser.fromJson(json['owner']) : null;
     htmlUrl = json['html_url'];
     description = json['description'];
     fork = json['fork'];
