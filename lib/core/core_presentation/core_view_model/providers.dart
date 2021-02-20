@@ -1,6 +1,6 @@
-import 'package:github_user/dependency_injection/app_dependency_injection.dart';
-import 'package:github_user/features/user_fetch/presentation/view_models/fetch_user_view_model.dart';
-import 'package:github_user/features/user_fetch/presentation/view_models/search_view_model.dart';
+import '../../../dependency_injection/app_dependency_injection.dart';
+import '../../../features/user_fetch/presentation/view_models/fetch_user_view_model.dart';
+import '../../../features/user_fetch/presentation/view_models/search_view_model.dart';
 import 'package:provider/provider.dart';
 import 'package:provider/single_child_widget.dart';
 
