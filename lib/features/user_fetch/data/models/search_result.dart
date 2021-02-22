@@ -1,4 +1,4 @@
-import 'package:github_user/features/user_fetch/data/models/github_user_model.dart';
+import 'github_user_model.dart';
 
 class UserSearchResult {
   int totalCount;
@@ -19,11 +19,11 @@ class UserSearchResult {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['total_count'] = this.totalCount;
-    data['incomplete_results'] = this.incompleteResults;
-    if (this.users != null) {
-      data['items'] = this.users.map((user) => user.toJson()).toList();
+    final data = Map<String, dynamic>();
+    data['total_count'] = totalCount;
+    data['incomplete_results'] = incompleteResults;
+    if (users != null) {
+      data['items'] = users.map((user) => user.toJson()).toList();
     }
     return data;
   }

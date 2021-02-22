@@ -7,9 +7,9 @@ enum InfoType {
 }
 
 class ProcessIndicator {
-  static showSnackBar(BuildContext context) {
-    Flushbar(
-      messageText: Text("Error"),
+  static Flushbar showSnackBar(BuildContext context) {
+    return Flushbar(
+      messageText: const Text('Error'),
     )..show(context);
   }
 }

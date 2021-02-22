@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:github_user/core/core_presentation/core_view_model/core_view_model.dart';
-import 'package:github_user/features/user_fetch/presentation/view_models/fetch_user_view_model.dart';
+import '../../../../core/core_presentation/core_view_model/core_view_model.dart';
+import '../view_models/fetch_user_view_model.dart';
 import 'package:provider/provider.dart';
 
 class UserDetailsView extends StatefulWidget {
@@ -29,8 +29,8 @@ class _UserDetailsViewState extends State<UserDetailsView> {
           centerTitle: true,
           backgroundColor: Colors.white,
           title: Text(
-            provider.user?.name ?? "Name",
-            style: TextStyle(
+            provider.user?.name ?? 'Name',
+            style: const TextStyle(
               fontSize: 20,
               color: Colors.black,
             ),
@@ -38,11 +38,11 @@ class _UserDetailsViewState extends State<UserDetailsView> {
           elevation: 0.0,
         ),
         body: provider.appViewState == ViewState.loading
-            ? Center(
+            ? const Center(
                 child: CircularProgressIndicator(),
               )
             : SingleChildScrollView(
-                child: Container(
+                child: SizedBox(
                   child: Column(
                     children: [
                       Image(
@@ -50,13 +50,13 @@ class _UserDetailsViewState extends State<UserDetailsView> {
                         width: double.infinity,
                         fit: BoxFit.fitHeight,
                         image: NetworkImage(provider.user?.avatarUrl ??
-                            "https://avatars.githubusercontent.com/u/583231?s=460&u=a59fef2a493e2b67dd13754231daf220c82ba84d&v=4"),
+                            'https://avatars.githubusercontent.com/u/583231?s=460&u=a59fef2a493e2b67dd13754231daf220c82ba84d&v=4'),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(top: 15.0, bottom: 15.0),
                         child: Text(
-                          provider.user?.name ?? "Name",
-                          style: TextStyle(
+                          provider.user?.name ?? 'Name',
+                          style: const TextStyle(
                             fontSize: 20,
                           ),
                         ),
@@ -64,8 +64,8 @@ class _UserDetailsViewState extends State<UserDetailsView> {
                       Padding(
                         padding: const EdgeInsets.only(top: 15.0, bottom: 15.0),
                         child: Text(
-                          "Number of followers: ${provider.user?.followers}",
-                          style: TextStyle(
+                          'Number of followers: ${provider.user?.followers}',
+                          style: const TextStyle(
                             fontSize: 20,
                           ),
                         ),
@@ -73,8 +73,8 @@ class _UserDetailsViewState extends State<UserDetailsView> {
                       Padding(
                         padding: const EdgeInsets.only(top: 15.0, bottom: 15.0),
                         child: Text(
-                          "Number of following: ${provider.user?.following}",
-                          style: TextStyle(
+                          'Number of following: ${provider.user?.following}',
+                          style: const TextStyle(
                             fontSize: 20,
                           ),
                         ),
@@ -82,8 +82,9 @@ class _UserDetailsViewState extends State<UserDetailsView> {
                       Padding(
                         padding: const EdgeInsets.only(top: 15.0, bottom: 15.0),
                         child: Text(
-                          "Number of public gists: ${provider.user?.publicGists}",
-                          style: TextStyle(
+                          '''
+Number of public gists: ${provider.user?.publicGists}''',
+                          style: const TextStyle(
                             fontSize: 20,
                           ),
                         ),
@@ -91,8 +92,9 @@ class _UserDetailsViewState extends State<UserDetailsView> {
                       Padding(
                         padding: const EdgeInsets.only(top: 15.0, bottom: 15.0),
                         child: Text(
-                          "Number of public repo: ${provider.user?.publicRepos}",
-                          style: TextStyle(
+                          '''
+Number of public repo: ${provider.user?.publicRepos}''',
+                          style: const TextStyle(
                             fontSize: 20,
                           ),
                         ),
@@ -100,11 +102,11 @@ class _UserDetailsViewState extends State<UserDetailsView> {
                       Padding(
                         padding: const EdgeInsets.only(top: 15.0, bottom: 15.0),
                         child: Text(
-                          provider.user?.hireable.toString() == "null"
-                              ? "Available for hire : Unknown"
-                              : "Available for hire : " +
+                          provider.user?.hireable.toString() == 'null'
+                              ? 'Available for hire : Unknown'
+                              : 'Available for hire : ' +
                                   provider.user?.hireable.toString(),
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 20,
                           ),
                         ),
