@@ -3,7 +3,7 @@ import '../features/user_fetch/domain/repository/user_fetch_repository.dart';
 import '../features/user_fetch/domain/use_cases/fetch_user.dart';
 import '../features/user_fetch/domain/use_cases/fetch_user_repo.dart';
 import '../features/user_fetch/domain/use_cases/search_user.dart';
-import '../features/user_fetch/presentation/view_models/fetch_user_repo_View_model.dart';
+import '../features/user_fetch/presentation/view_models/fetch_user_repo_view_model.dart';
 import '../features/user_fetch/presentation/view_models/fetch_user_view_model.dart';
 import '../features/user_fetch/presentation/view_models/search_view_model.dart';
 
