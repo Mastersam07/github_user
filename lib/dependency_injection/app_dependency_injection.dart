@@ -5,6 +5,7 @@ class AppDependencyInjection {
   static final di = GetIt.instance;
   // ignore: always_declare_return_types
   static registerDependencies() {
-    registerSearchDependencies();
+    // ignore: unnecessary_statements
+    registerSearchDependencies;
   }
 }
